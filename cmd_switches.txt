@@ -1,0 +1,44 @@
+╔══════════════════════════════════════════════════════════╗
+    The following documentation was taken from:
+    https://wias-berlin.de/software/tetgen/switches.html
+    This documentation was authored by Dr. Hang Si
+╚══════════════════════════════════════════════════════════╝
+
+TetGen Command Line Switches
+The command syntax is:
+
+tetgen [-pq__a__AriYMS__T__dzjo_fengGOJBNEFICQVvh] input_file
+
+Underscores indicate that numbers may optionally follow certain switches. Do not leave any space between a switch and its numeric parameter. ``input_file'' must be a file with extension .node, or extension .poly or .smesh or other supported file formats if the -p switch is used. If -r is used, you must supply .node and .ele files, and possibly a .face file, and a .vol file as well.
+
+Below is an overview of all command line switches and a short description follows each switch. This information is also available by invoking TetGen without any switch and input file (i.e., type ``tetgen'').
+
+-p	Tetrahedralizes a picecwise linear complex (.poly or .smesh file).
+-q	Quality mesh generation. A minimum radius-edge ratio may be specifyed (default 2.0).
+-a	Applies a maximum tetrahedron volume constraint.
+-A	Assigns attributes to identify tetrahedra in certain regions.
+-r	Reconstructs/Refines a previously generated mesh.
+-Y	Suppresses boundary facets/segments splitting.
+-i	Inserts a list of additional points into mesh.
+-M	Does not merge coplanar facets.
+-T	Set a tolerance for coplanar test (default 1e-8).
+-d	Detect intersections of PLC facets.
+-z	Numbers all output items starting from zero.
+-j	Jettison unused vertices from output .node file
+-o2	Generates second-order subparametric elements.
+-f	Outputs faces (including non-boundary faces) to .face file.
+-e	Outputs subsegments to .edge file.
+-n	Outputs tetrahedra neighbors to .neigh file.
+-g	Outputs mesh to .mesh file for viewing by Medit.
+-G	Outputs mesh to .msh file for viewing by Gid.
+-O	Outputs mesh to .off file for viewing by Geomview.
+-B	Suppresses output of boundary information.
+-N	Suppresses output of .node file.
+-E	Suppresses output of .ele file.
+-F	Suppresses output of .face file.
+-I	Suppresses mesh iteration numbers.
+-C	Checks the consistency of the final mesh.
+-Q	Quiet: No terminal output except errors.
+-V	Verbose: Detailed information on what I'm doing.
+-v	Prints the version information.
+-h	Help: A brief instruction for using TetGen.
